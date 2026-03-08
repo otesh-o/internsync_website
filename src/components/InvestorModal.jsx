@@ -46,11 +46,27 @@ const InvestorModal = ({ isOpen, onClose }) => {
                     <div className="deck-view">
                         <h2>InternSync Pitch Deck</h2>
                         <div className="deck-placeholder">
-                            <h3>Q1 2026 Investor Presentation</h3>
+                            <div className="pdf-preview-icon">📄</div>
+                            <h3>InternSync Pitch Deck (Final)</h3>
+                            <p>Q1 2026 Investor Presentation</p>
                         </div>
                         <div className="deck-actions">
-                            <button className="action-btn primary">Download PDF</button>
-                            <button className="action-btn secondary">Contact Founders</button>
+                            <a
+                                href="/InternSync Pitch Deck(Final)-4.pdf"
+                                target="_blank"
+                                className="action-btn primary"
+                                style={{ textDecoration: 'none' }}
+                            >
+                                View Deck
+                            </a>
+                            <a
+                                href="/InternSync Pitch Deck(Final)-4.pdf"
+                                download
+                                className="action-btn secondary"
+                                style={{ textDecoration: 'none' }}
+                            >
+                                Download PDF
+                            </a>
                         </div>
                     </div>
                 )}

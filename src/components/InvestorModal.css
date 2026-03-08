@@ -174,15 +174,23 @@ input.error {
     background: rgba(255, 255, 255, 0.05);
 }
 
-.slide-icon {
-    font-size: 3rem;
-    opacity: 0.8;
+.pdf-preview-icon {
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+    filter: drop-shadow(0 4px 12px rgba(255, 255, 255, 0.1));
 }
 
 .deck-placeholder h3 {
-    color: rgba(255, 255, 255, 0.9);
-    font-size: 1.1rem;
-    font-weight: 500;
+    color: #ffffff;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 0.5rem 0 0.25rem;
+}
+
+.deck-placeholder p {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.85rem;
+    margin: 0;
 }
 
 .deck-actions {
