@@ -1,0 +1,54 @@
+.infinite-ribbon-container {
+    position: absolute;
+    /* Default to absolute as per use case */
+    left: 50%;
+    top: 50%;
+    width: 120vw;
+    /* Wider than viewport to cover corners when rotated */
+    transform: translate(-50%, -50%) rotate(var(--rotation));
+    background: #000;
+    /* Default background, can be overridden */
+    color: white;
+    padding: 0.8rem 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+    z-index: 10;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.infinite-ribbon-content {
+    display: flex;
+    white-space: nowrap;
+    animation: ribbon-scroll var(--speed) linear infinite;
+    animation-direction: var(--direction);
+    width: max-content;
+}
+
+.ribbon-item {
+    padding: 0 1rem;
+    font-weight: 600;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Add a separator point via pseudo-element if needed, or keeping it clean */
+.ribbon-item::after {
+    content: "•";
+    opacity: 0.4;
+    margin-left: 1rem;
+}
+
+@keyframes ribbon-scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+        /* Using -50% assumes we duplicated enough content */
+    }
+}

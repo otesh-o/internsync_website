@@ -1,0 +1,161 @@
+.cta-section {
+    background: var(--color-bg);
+    padding: 5rem 4rem;
+    display: flex;
+    justify-content: center;
+}
+
+.cta-card {
+    background: #1a1a2e;
+    padding: 4rem 5rem;
+    border-radius: 24px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    max-width: 900px;
+    width: 100%;
+}
+
+.cta-container {
+    position: relative;
+    z-index: 1;
+}
+
+.cta-title {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+}
+
+.cta-description {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 2rem;
+}
+
+.cta-form {
+    display: flex;
+    gap: 0;
+    background: #fff;
+    border-radius: 30px;
+    padding: 0.35rem;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.cta-input {
+    flex: 1;
+    padding: 0.85rem 1.5rem;
+    border: none;
+    background: transparent;
+    font-size: 0.9rem;
+    color: #1a1a2e;
+    outline: none;
+}
+
+.cta-input::placeholder {
+    color: #999;
+}
+
+.cta-btn {
+    padding: 0.85rem 1.75rem;
+    background: #4361ee;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.cta-btn:hover {
+    background: #5a75f0;
+    transform: scale(1.02);
+}
+
+/* Decorative Shapes */
+.cta-shape {
+    position: absolute;
+    background: #4361ee;
+    z-index: 0;
+}
+
+.shape-left {
+    width: 180px;
+    height: 300px;
+    left: -40px;
+    top: 50%;
+    transform: translateY(-50%) rotate(-15deg);
+    border-radius: 20px;
+    opacity: 0.6;
+}
+
+.shape-left::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #4361ee;
+    border-radius: 20px;
+    top: -20px;
+    left: 20px;
+}
+
+.shape-right {
+    width: 150px;
+    height: 250px;
+    right: -30px;
+    top: -30px;
+    border-radius: 20px;
+    opacity: 0.6;
+    transform: rotate(15deg);
+}
+
+.shape-right::before {
+    content: '';
+    position: absolute;
+    width: 120px;
+    height: 200px;
+    background: #4361ee;
+    border-radius: 20px;
+    bottom: -60px;
+    right: 60px;
+    opacity: 0.8;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .cta-section {
+        padding: 4rem 1.25rem;
+    }
+
+    .cta-card {
+        padding: 3rem 1.5rem;
+    }
+
+    .cta-form {
+        flex-direction: column;
+        border-radius: 16px;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .cta-input {
+        border-bottom: 1px solid #eee;
+        border-radius: 12px 12px 0 0;
+        text-align: center;
+    }
+
+    .cta-btn {
+        border-radius: 0 0 12px 12px;
+        width: 100%;
+    }
+
+    .cta-shape {
+        display: none;
+    }
+}

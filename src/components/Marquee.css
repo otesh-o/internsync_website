@@ -1,0 +1,57 @@
+.marquee {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.marquee::before,
+.marquee::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.marquee::before {
+    left: 0;
+    background: linear-gradient(to right, #000000 0%, transparent 100%);
+}
+
+.marquee::after {
+    right: 0;
+    background: linear-gradient(to left, #000000 0%, transparent 100%);
+}
+
+.marquee-track {
+    display: flex;
+    width: max-content;
+    animation: scroll var(--duration) linear infinite;
+}
+
+.marquee-track.reverse {
+    animation-direction: reverse;
+}
+
+.marquee-content {
+    display: flex;
+    gap: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-25%);
+    }
+}
+
+/* Pause on hover */
+.marquee:hover .marquee-track {
+    animation-play-state: paused;
+}

@@ -1,0 +1,121 @@
+.process-section {
+    background: var(--color-bg);
+    padding: 6rem 4rem;
+}
+
+.process-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.process-steps {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.process-step {
+    display: flex;
+    align-items: center;
+}
+
+.step-circle {
+    width: 260px;
+    height: 260px;
+    border: 1.5px solid rgba(0, 0, 0, 0.12);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: -40px;
+    background: var(--color-bg);
+    position: relative;
+}
+
+.process-step:first-child .step-circle {
+    margin-left: 0;
+}
+
+.step-content {
+    text-align: left;
+    padding: 1.5rem;
+}
+
+.step-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1a1a2e;
+    margin-bottom: 0.75rem;
+}
+
+.step-items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.step-items li {
+    font-size: 0.85rem;
+    color: #666;
+    line-height: 1.8;
+}
+
+.step-arrow {
+    font-size: 1.25rem;
+    color: #1a1a2e;
+    margin: 0 -20px;
+    z-index: 1;
+}
+
+@media (max-width: 1024px) {
+    .process-section {
+        padding: 4rem 2rem;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        /* Firefox */
+        -ms-overflow-style: none;
+        /* IE and Edge */
+    }
+
+    .process-section::-webkit-scrollbar {
+        display: none;
+        /* Chrome, Safari and Opera */
+    }
+
+    .process-container {
+        width: max-content;
+        margin: 0;
+    }
+
+    .process-steps {
+        justify-content: flex-start;
+        padding: 2rem 0;
+    }
+
+    .step-circle {
+        width: 220px;
+        height: 220px;
+        margin-left: -30px;
+    }
+
+    .step-title {
+        font-size: 1.25rem;
+    }
+
+    .step-items li {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .process-section {
+        padding: 4rem 1.25rem;
+    }
+
+    .step-circle {
+        width: 200px;
+        height: 200px;
+        margin-left: -25px;
+    }
+}

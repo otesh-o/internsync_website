@@ -1,0 +1,139 @@
+.device-morph-section {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(180deg, var(--color-bg) 0%, #ebe5db 100%);
+    padding: 6rem 6rem;
+}
+
+.device-morph-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+/* Opportunities Content */
+.opportunities-content {
+    max-width: 450px;
+}
+
+.opportunities-title {
+    font-size: clamp(2.5rem, 4vw, 3.5rem);
+    font-weight: 400;
+    color: #1a1a2e;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    margin-bottom: 1.5rem;
+}
+
+.opportunities-title .highlight {
+    color: #4361ee;
+    font-weight: 500;
+}
+
+.opportunities-description {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.7;
+}
+
+/* Video Card */
+.video-card {
+    background: linear-gradient(145deg, #1a1a2e, #2d2d44);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.2);
+}
+
+.video-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    padding: 2px;
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.05));
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+    border-radius: inherit;
+}
+
+.laptop-toolbar {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 12px 16px;
+    background: #2a2a40;
+}
+
+.toolbar-dots {
+    display: flex;
+    gap: 6px;
+}
+
+.toolbar-dots span {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #ff5f57;
+}
+
+.toolbar-dots span:nth-child(2) {
+    background: #ffbd2e;
+}
+
+.toolbar-dots span:nth-child(3) {
+    background: #28ca42;
+}
+
+.toolbar-url {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.6);
+    text-align: center;
+}
+
+.laptop-screen-content {
+    aspect-ratio: 16/10;
+    background: #0a0a15;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.laptop-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .device-morph-container {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        text-align: center;
+    }
+
+    .opportunities-content {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 640px) {
+    .device-morph-section {
+        padding: 4rem 1.5rem;
+    }
+
+    .opportunities-title {
+        font-size: 2rem;
+    }
+}

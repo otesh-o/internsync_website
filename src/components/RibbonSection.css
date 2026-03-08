@@ -1,0 +1,13 @@
+.ribbon-primary {
+    background: #4361ee;
+    color: white;
+    box-shadow: 0 10px 30px rgba(67, 97, 238, 0.3);
+}
+
+.ribbon-secondary {
+    background: #1a1a2e;
+    /* Dark fallback */
+    color: white;
+    background: linear-gradient(90deg, #1a1a2e, #2d2d44);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
