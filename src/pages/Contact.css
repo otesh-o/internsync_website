@@ -1,0 +1,139 @@
+.contact-page {
+    padding: 8rem 2rem 6rem;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+}
+
+.contact-container {
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.contact-header {
+    margin-bottom: 3rem;
+}
+
+.contact-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    color: #1a1a2e;
+    letter-spacing: -0.02em;
+}
+
+.contact-subtitle {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.5;
+}
+
+.contact-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.contact-info-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.contact-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #999;
+}
+
+.contact-value {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #1a1a2e;
+    text-decoration: none;
+    transition: color 0.2s ease;
+    word-break: break-all;
+}
+
+.contact-value:hover {
+    color: #2563eb;
+}
+
+.phone-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.copy-button {
+    background: #f5f5f7;
+    border: none;
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #1a1a2e;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.copy-button:hover {
+    background: #e5e5e7;
+}
+
+.copy-button.copied {
+    background: #2563eb;
+    color: #fff;
+}
+
+@media (max-width: 640px) {
+    .contact-page {
+        padding: 4rem 1.5rem 3rem;
+        min-height: auto;
+    }
+    
+    .contact-header {
+        margin-bottom: 2rem;
+    }
+
+    .contact-title {
+        font-size: 1.75rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .contact-subtitle {
+        font-size: 0.95rem;
+    }
+
+    .contact-content {
+        gap: 1.75rem;
+    }
+
+    .contact-info-item {
+        gap: 0.25rem;
+    }
+
+    .contact-label {
+        font-size: 0.75rem;
+    }
+    
+    .contact-value {
+        font-size: 1.1rem;
+    }
+
+    .phone-wrapper {
+        gap: 0.75rem;
+    }
+
+    .copy-button {
+        padding: 0.3rem 0.6rem;
+        font-size: 0.75rem;
+    }
+}

@@ -1,39 +1,30 @@
 import { useState } from 'react';
+import { Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
-import Hero from './components/Hero';
-import Testimonials from './components/Testimonials';
-import Features from './components/Features';
-import DeviceMorph from './components/DeviceMorph';
 import Footer from './components/Footer';
 import InvestorModal from './components/InvestorModal';
-import RibbonSection from './components/RibbonSection';
-import Pricing from './components/Pricing';
-import Process from './components/Process';
-import CTA from './components/CTA';
+import Home from './pages/Home';
+import Contact from './pages/Contact';
 import './App.css';
 
 function App() {
   const [isInvestorModalOpen, setIsInvestorModalOpen] = useState(false);
 
   return (
-    <>
+    <div className="app-wrapper">
       <Header onInvestorClick={() => setIsInvestorModalOpen(true)} />
-      <main>
-        <Hero />
-        <Process />
-        <Testimonials />
-        <Features />
-        <DeviceMorph />
-        <RibbonSection />
-        <Pricing />
-        <CTA />
+      <main className="main-content">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
       </main>
       <Footer onInvestorClick={() => setIsInvestorModalOpen(true)} />
       <InvestorModal
         isOpen={isInvestorModalOpen}
         onClose={() => setIsInvestorModalOpen(false)}
       />
-    </>
+    </div>
   );
 }
 
