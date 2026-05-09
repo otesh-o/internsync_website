@@ -4,6 +4,7 @@ import PhoneMockup from './PhoneMockup';
 
 const Hero = () => {
     const [email, setEmail] = useState('');
+    const [message, setMessage] = useState('');
     const [scrollY, setScrollY] = useState(0);
     const phoneRef = useRef(null);
 
@@ -16,6 +17,20 @@ const Hero = () => {
     }, []);
 
     const parallaxOffset = scrollY * 0.3;
+
+    const scrollToCTA = () => {
+        document.getElementById('cta-section')?.scrollIntoView({ behavior: 'smooth' });
+    };
+
+    const handleHeroSubmit = () => {
+        if (email.trim()) {
+            setMessage('Thanks! You have been added to our waitlist.');
+            setEmail('');
+            setTimeout(() => setMessage(''), 3000);
+        } else {
+            scrollToCTA();
+        }
+    };
 
     return (
         <section className="hero">
@@ -51,8 +66,9 @@ const Hero = () => {
                             onChange={(e) => setEmail(e.target.value)}
                             className="hero-input"
                         />
-                        <button className="hero-cta-btn">Try it free</button>
+                        <button className="hero-cta-btn" onClick={handleHeroSubmit}>Try it free</button>
                     </div>
+                    {message && <p className="hero-message">{message}</p>}
                 </div>
 
                 {/* Right Phone Section */}
@@ -77,7 +93,7 @@ const Hero = () => {
                     <div className="hero-bg-card">
                         <div className="bg-card-text">
                             <h3>Mobile<br />Application</h3>
-                            <a href="#" className="download-link">DOWNLOAD APP ↗</a>
+                            <button className="download-link" onClick={() => alert('Coming soon to the App Store and Google Play!')}>DOWNLOAD APP ↗</button>
                         </div>
                     </div>
                 </div>

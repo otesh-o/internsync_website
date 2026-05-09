@@ -43,6 +43,9 @@
     font-weight: 600;
     text-decoration: none;
     transition: all 0.2s ease;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
 }
 
 .features-cta:hover {
@@ -91,6 +94,12 @@
     align-items: center;
     justify-content: center;
     font-size: 1.5rem;
+    color: #fff;
+}
+
+.feature-icon svg {
+    width: 22px;
+    height: 22px;
 }
 
 .feature-title {
@@ -158,6 +167,9 @@
     text-decoration: none;
     transition: all 0.2s ease;
     margin-top: 1rem;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
 }
 
 .feature-btn:hover {

@@ -11,10 +11,11 @@ const PhoneMockup = ({ children }) => {
             <div className="phone-notch"></div>
             <div className="phone-screen">
                 {children || (
-                    <div className="phone-placeholder">
-                        <span>App Preview</span>
-                        <span className="phone-subtext">Coming Soon</span>
-                    </div>
+                    <img
+                        src="/app-preview.jpeg"
+                        alt="InternSync App Preview"
+                        className="phone-preview-image"
+                    />
                 )}
             </div>
         </div>

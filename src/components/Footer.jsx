@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import './Footer.css';
 
-const Footer = ({ onInvestorClick }) => {
+const Footer = () => {
     return (
         <footer className="footer">
             <div className="footer-brand">
@@ -15,8 +15,8 @@ const Footer = ({ onInvestorClick }) => {
                     <Link to="/contact" className="footer-link">
                         Contact Support
                     </Link>
-                    <a href="#" className="footer-link">Privacy Policy</a>
-                    <a href="#" className="footer-link">Terms of Service</a>
+                    <button className="footer-link" onClick={() => alert('Coming soon!')}>Privacy Policy</button>
+                    <button className="footer-link" onClick={() => alert('Coming soon!')}>Terms of Service</button>
                 </div>
             </div>
         </footer>

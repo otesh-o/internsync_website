@@ -3,9 +3,21 @@ import './CTA.css';
 
 const CTA = () => {
     const [email, setEmail] = useState('');
+    const [message, setMessage] = useState('');
+
+    const handleSubmit = () => {
+        if (email.trim()) {
+            setMessage('Thanks! You have been added to our waitlist.');
+            setEmail('');
+            setTimeout(() => setMessage(''), 3000);
+        } else {
+            setMessage('Please enter a valid email or phone number.');
+            setTimeout(() => setMessage(''), 3000);
+        }
+    };
 
     return (
-        <section className="cta-section">
+        <section id="cta-section" className="cta-section">
             <div className="cta-card">
                 {/* Decorative Shapes */}
                 <div className="cta-shape shape-left"></div>
@@ -24,8 +36,9 @@ const CTA = () => {
                             onChange={(e) => setEmail(e.target.value)}
                             className="cta-input"
                         />
-                        <button className="cta-btn">Try it free</button>
+                        <button className="cta-btn" onClick={handleSubmit}>Try it free</button>
                     </div>
+                    {message && <p className="cta-message">{message}</p>}
                 </div>
             </div>
         </section>

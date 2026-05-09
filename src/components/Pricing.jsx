@@ -65,7 +65,10 @@ const Pricing = () => {
                                     </li>
                                 ))}
                             </ul>
-                            <button className={`plan-cta ${plan.highlighted ? 'primary' : 'secondary'}`}>
+                            <button
+                                className={`plan-cta ${plan.highlighted ? 'primary' : 'secondary'}`}
+                                onClick={() => document.getElementById('cta-section')?.scrollIntoView({ behavior: 'smooth' })}
+                            >
                                 {plan.cta}
                             </button>
                         </div>

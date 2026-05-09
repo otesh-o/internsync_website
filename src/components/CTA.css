@@ -77,6 +77,13 @@
     transform: scale(1.02);
 }
 
+.cta-message {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #10b981;
+    font-weight: 500;
+}
+
 /* Decorative Shapes */
 .cta-shape {
     position: absolute;

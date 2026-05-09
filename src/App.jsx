@@ -19,7 +19,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </main>
-      <Footer onInvestorClick={() => setIsInvestorModalOpen(true)} />
+      <Footer />
       <InvestorModal
         isOpen={isInvestorModalOpen}
         onClose={() => setIsInvestorModalOpen(false)}
