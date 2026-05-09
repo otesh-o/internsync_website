@@ -15,8 +15,8 @@ const Footer = () => {
                     <Link to="/contact" className="footer-link">
                         Contact Support
                     </Link>
-                    <button className="footer-link" onClick={() => alert('Coming soon!')}>Privacy Policy</button>
-                    <button className="footer-link" onClick={() => alert('Coming soon!')}>Terms of Service</button>
+                    <Link to="/privacy" className="footer-link">Privacy Policy</Link>
+                    <Link to="/terms" className="footer-link">Terms of Service</Link>
                 </div>
             </div>
         </footer>
