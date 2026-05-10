@@ -3,7 +3,7 @@ import Testimonials from '../components/Testimonials';
 import Features from '../components/Features';
 import DeviceMorph from '../components/DeviceMorph';
 import RibbonSection from '../components/RibbonSection';
-import Pricing from '../components/Pricing';
+
 import Process from '../components/Process';
 import CTA from '../components/CTA';
 
@@ -16,7 +16,7 @@ const Home = () => {
             <Features />
             <DeviceMorph />
             <RibbonSection />
-            <Pricing />
+
             <CTA />
         </main>
     );
