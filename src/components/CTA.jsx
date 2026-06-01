@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './CTA.css';
+import StoreBadges from './StoreBadges';
 
 const CTA = () => {
     const [email, setEmail] = useState('');
@@ -26,7 +27,7 @@ const CTA = () => {
                 <div className="cta-container">
                     <h2 className="cta-title">Simplify Your Job Search</h2>
                     <p className="cta-description">
-                        Enter your email or phone number to get started with InternSync's tools.
+                        Download InternSync and start swiping your way to your dream career today.
                     </p>
                     <div className="cta-form">
                         <input
@@ -39,6 +40,9 @@ const CTA = () => {
                         <button className="cta-btn" onClick={handleSubmit}>Try it free</button>
                     </div>
                     {message && <p className="cta-message">{message}</p>}
+                    <div className="cta-store-badges">
+                        <StoreBadges variant="light" />
+                    </div>
                 </div>
             </div>
         </section>

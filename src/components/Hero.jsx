@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import './Hero.css';
 import PhoneMockup from './PhoneMockup';
+import StoreBadges from './StoreBadges';
 
 const Hero = () => {
     const [email, setEmail] = useState('');
@@ -93,7 +94,7 @@ const Hero = () => {
                     <div className="hero-bg-card">
                         <div className="bg-card-text">
                             <h3>Mobile<br />Application</h3>
-                            <button className="download-link" onClick={() => alert('Coming soon to the App Store and Google Play!')}>DOWNLOAD APP ↗</button>
+                            <StoreBadges variant="inline" />
                         </div>
                     </div>
                 </div>

@@ -1,0 +1,101 @@
+.store-badges {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.store-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  min-width: 140px;
+}
+
+.store-badge:hover {
+  transform: scale(1.03);
+}
+
+.store-icon {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+}
+
+.store-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.store-subtitle {
+  font-size: 0.6rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+}
+
+.store-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+/* Dark variant (default) - black bg, white text */
+.store-badges.dark .store-badge {
+  background: #111827;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.store-badges.dark .store-badge:hover {
+  background: #1f2937;
+}
+
+/* Light variant - white bg, dark text */
+.store-badges.light .store-badge {
+  background: #fff;
+  color: #111827;
+  border: 1px solid #e5e7eb;
+}
+
+.store-badges.light .store-badge:hover {
+  background: #f3f4f6;
+}
+
+/* Inline variant - no background, just text+icon */
+.store-badges.inline .store-badge {
+  background: transparent;
+  padding: 0.25rem 0;
+  min-width: auto;
+}
+
+.store-badges.inline .store-subtitle {
+  font-size: 0.55rem;
+}
+
+.store-badges.inline .store-title {
+  font-size: 0.85rem;
+}
+
+@media (max-width: 640px) {
+  .store-badges {
+    gap: 0.5rem;
+  }
+
+  .store-badge {
+    padding: 0.45rem 0.75rem;
+    min-width: 125px;
+  }
+
+  .store-icon {
+    width: 18px;
+    height: 18px;
+  }
+
+  .store-title {
+    font-size: 0.85rem;
+  }
+}
