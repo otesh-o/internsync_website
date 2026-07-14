@@ -1,11 +1,15 @@
 import { Link } from 'react-router-dom';
 import './Footer.css';
+import StoreBadges from './StoreBadges';
 
 const Footer = () => {
     return (
         <footer className="footer">
             <div className="footer-brand">
                 <h2 className="footer-logo-large">InternSync</h2>
+            </div>
+            <div className="footer-store-badges">
+                <StoreBadges variant="dark" />
             </div>
             <div className="footer-content">
                 <div className="footer-left">

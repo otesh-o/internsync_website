@@ -84,6 +84,12 @@
     font-weight: 500;
 }
 
+.cta-store-badges {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+}
+
 /* Decorative Shapes */
 .cta-shape {
     position: absolute;
